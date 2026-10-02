@@ -1,20 +1,29 @@
 # 流程反馈：合并后状态未同步
 
 日期：2026-10-02
+原问题适用提交：`a0ef723d0700123b18ecb6a5878a8f8a4de2faf4`（PR #2 合并后、PR #4 修订前的历史状态）。
 问题：导入 PR #2 已合并、Issue #1 已关闭，但 PROJECT.md 与接入记录仍保留“等待确认”“没有实际合并”等表述；README.md 开头仍以未连接远端的文件包交付状态描述仓库。
 影响：接手者可能误判当前阶段、重复处理已完成导入任务，或混淆文件包历史快照、平台配置验证与试点接入验收。
 出现的场景：V1.0 文件包经用户确认后导入 main，从初始接入转入维护 / 试点准备；任务平台已收尾，仓库文档尚未同步。
-关联项目 / Issue / 证据：[当前维护任务 Issue #3](https://github.com/gy9037/project-collaboration-standards/issues/3)、[已关闭的 Issue #1](https://github.com/gy9037/project-collaboration-standards/issues/1)、[已合并的 PR #2](https://github.com/gy9037/project-collaboration-standards/pull/2)、[接入核对记录](../../audit/GITHUB-ADOPTION.md)。
+关联项目 / Issue / 证据：[历史维护任务 Issue #3（已关闭）](https://github.com/gy9037/project-collaboration-standards/issues/3)、[历史修订 PR #4（已合并）](https://github.com/gy9037/project-collaboration-standards/pull/4)、[已关闭的 Issue #1](https://github.com/gy9037/project-collaboration-standards/issues/1)、[已合并的 PR #2](https://github.com/gy9037/project-collaboration-standards/pull/2)、[接入核对记录](../../audit/GITHUB-ADOPTION.md)。
 状态：待整理
 
 ## 证据与处理边界
 
-PR #2 于 `2026-10-02T03:41:45Z` 合并，提交为 `a0ef723d0700123b18ecb6a5878a8f8a4de2faf4`；PR 正文保存用户对 head `6b761df9ea88fcec9a04b3167400097e5d3aebb0` 的确认。Issue #1 记录 Squash Merge 及历史 59 文件 blob 校验，本次未重做该校验。
+PR #2 于 `2026-10-02T03:41:45Z` 合并，提交为 `a0ef723d0700123b18ecb6a5878a8f8a4de2faf4`；PR 正文保存用户对 head `6b761df9ea88fcec9a04b3167400097e5d3aebb0` 的确认。Issue #1 记录 Squash Merge 及历史 59 文件 blob 校验；Issue #3 的导入状态核对引用该历史记录，未重做该项校验。
 
-Issue #3 同步当前状态并保留历史原文，任务实时进度以 Issue 及关联 PR 为准。本维护任务只推进至 PR 等待用户确认，不执行合并；尚无试点验收证据，保护配置回读不代表直接 push 阻断测试已完成。
+Issue #3 对应的 PR #4 曾同步导入完成状态并保留历史原文，已于 2026-10-02 合并。该文档修订并未提供试点验收证据，保护配置回读也不代表直接 push 阻断测试已完成。
+
+## 再次出现记录
+
+2026-10-02，PR #4 于 `2026-10-02T14:53:42Z` 合并为 `4a94426b4d2823ed41e3c98d85866369f1dc4abf`，Issue #3 于 `2026-10-02T14:53:43Z` 关闭。合并后检查该提交，PROJECT.md、README.md、接入记录及本反馈仍含维护任务等待确认、不执行合并等临时状态，再次造成任务已收尾而文档仍指向等待阶段的问题。
+
+批准 head `8fd4638182697c98fcf8e7384c09857746e73e46` 与合并提交的 tree 同为 `bd85ece275b2fef57fa364073a22d65100fda904`，差异复核为空。问题不在于合并内容偏离批准版本，而在于将合并前的任务临时状态写进了项目状态与未限定历史范围的记录。
 
 ## 建议：收尾一致性检查
 
 建议在任务收尾时对照 Issue/PR、PROJECT.md、README.md 及相关验收记录，检查阶段、重点、任务入口与未验证项是否一致；历史描述明确标注适用时间，实时任务进度链接到 Issue/PR，避免写入合并即过时的临时状态。若合并后仍有失配，通过后续维护任务和 PR 同步，不直接修改 main。
 
-以上为待整理建议，不是现行 V1.0 新增规则。本次不修改正式规范或版本快照；是否需要规则调整，由维护者整理后交用户决定。
+建议将稳定项目状态与任务临时状态分离：PROJECT.md / README.md 描述项目阶段、长期重点和验收边界，等待确认、待合并等进度保存在 Issue/PR；历史记录以日期、提交和阶段限定。提交前假设该 PR 已经合并，逐条检查修改后的文字是否仍成立，避免用一轮新的等待状态替换上一轮过时状态。
+
+以上为待整理建议，不是现行 V1.0 新增规则；记录反馈不改变正式规范或版本快照，是否需要规则调整，由维护者整理后交用户决定。
