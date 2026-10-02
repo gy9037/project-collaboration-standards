@@ -2,7 +2,7 @@
 
 当前正式版本：[v1.0](versions/v1.0/STANDARD.md)。历史版本保留在 `versions/`，已发布版本不覆盖；后续修改创建新版本。
 
-规范决策按需存入 `decisions/`，流程反馈按需存入 `feedback/`；备用模板在本仓库 `templates/`（decision.md、feedback.md、weekly-distillation.md），需要时再复制。当前未产生对应记录，不预建空目录。
+规范决策按需存入 `decisions/`，流程反馈按需存入 `feedback/`；备用模板在本仓库 `templates/`（decision.md、feedback.md、weekly-distillation.md），需要时再复制。当前已有[合并后状态同步反馈](feedback/2026-10-02-post-merge-status.md)（待整理）；尚无规范决策记录，不预建空目录。
 
 [维护者职责](MAINTAINER.md) · [项目接入清单](ADOPTION.md)
 
