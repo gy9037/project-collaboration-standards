@@ -20,4 +20,4 @@
 
 ## 当前 GitHub 仓库
 
-本仓库私有：[gy9037/project-collaboration-standards](https://github.com/gy9037/project-collaboration-standards)。当前状态见 [PROJECT.md](PROJECT.md)，执行规则见 [AGENTS.md](AGENTS.md)。文件包历史的“未初始化 Git”描述针对交付时快照；实际接入进度以 PROJECT.md 与 [GitHub 接入记录](audit/GITHUB-ADOPTION.md) 为准。
+本仓库公开（用户已确认）：[gy9037/project-collaboration-standards](https://github.com/gy9037/project-collaboration-standards)。当前状态见 [PROJECT.md](PROJECT.md)，执行规则见 [AGENTS.md](AGENTS.md)。文件包历史的“未初始化 Git”描述针对交付时快照；实际接入进度以 PROJECT.md 与 [GitHub 接入记录](audit/GITHUB-ADOPTION.md) 为准。

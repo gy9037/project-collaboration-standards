@@ -10,14 +10,14 @@
 ## 当前重点
 
 1. 初始导入 PR 与用户验收。
-2. 决定私有仓库分支保护的套餐限制处理方案。
+2. 核对已启用的 main 保护与保存用户确认记录。
 3. 完成首次真实受控任务验收，之后逐步接入试点项目。
 
 ## 当前边界与约束
 
-范围为规范、Idea Lab 和通用模板，不开发初始化脚本或未验证自动化。当前仓库私有；维护者角色由本次协调 Agent 暂负责，后续执行不绑定模型；每周整理职责未建立定时任务。
+范围为规范、Idea Lab 和通用模板，不开发初始化脚本或未验证自动化。当前仓库公开（用户已确认）；维护者角色由本次协调 Agent 暂负责，后续执行不绑定模型；每周整理职责未建立定时任务。
 
-开工阻塞：平台强制保护无法启用，GitHub rulesets API 返回 403，要求升级 Pro 或公开仓库。用户待决定方案，在解决前不宣称完成接入或合并导入 PR。
+当前待办：main 保护已配置并通过 API 回读核对；导入 PR 等待用户对当前版本确认。真实合并流程尚未执行，不宣称接入验收完成。
 
 ## Critical Areas
 
@@ -33,7 +33,7 @@
 - 接入证据：audit/GITHUB-ADOPTION.md
 - 静态验证：python3 tools/verify_package.py
 - Issue：https://github.com/gy9037/project-collaboration-standards/issues/1
-- PR：导入提交后创建。
+- PR：https://github.com/gy9037/project-collaboration-standards/pull/2
 - DR：暂无。
 
 GitHub 已自动建立含 README 的空仓库起点；V1.0 正式内容通过任务分支与 PR 导入。暂无生产环境或部署。
