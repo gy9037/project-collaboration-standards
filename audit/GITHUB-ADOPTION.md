@@ -1,6 +1,6 @@
 # GitHub 接入记录
 
-以下早期记录保留当时原文；其中“未生效”“尚待确认”“没有实际合并”等仅适用于对应历史阶段，不代表当前状态。最新核对见文末“合并后状态核对”。
+以下早期记录保留当时原文；其中“未生效”“尚待确认”“没有实际合并”等仅适用于对应历史阶段，不代表当前状态。PR #4 的合并及问题复发记录见文末“历史阶段四”。
 
 ## 历史阶段一：初建与套餐限制
 
@@ -21,7 +21,9 @@ main 保护 PUT 配置成功并回读：PR 必须、管理员适用、禁止 for
 
 平台配置读取已验证；没有用直接 push main 的破坏性试验验证，没有实际合并 PR，完整接入验收仍未完成。原套餐阻塞解除，当前等待用户合并确认。
 
-## 合并后状态核对
+## 历史阶段三：PR #2 合并后状态核对
+
+适用范围：2026-10-02，PR #2 合并后、PR #4 合并前的 Issue #3 维护阶段；核对基线为 `a0ef723d0700123b18ecb6a5878a8f8a4de2faf4`。以下原文中的“本次”“本维护任务”、main SHA 及“等待用户确认，不执行合并”均限定于该历史阶段，不描述后续任务或实时 main。
 
 核对日期：2026-10-02。维护任务：[Issue #3](https://github.com/gy9037/project-collaboration-standards/issues/3)。本节为只读核对，不重新执行历史合并或修改平台配置。
 
@@ -46,3 +48,13 @@ git rev-parse HEAD
 证据入口：[合并提交](https://github.com/gy9037/project-collaboration-standards/commit/a0ef723d0700123b18ecb6a5878a8f8a4de2faf4) · [main 保护 API](https://api.github.com/repos/gy9037/project-collaboration-standards/branches/main/protection)（需相应读取权限，返回实时配置）。
 
 验证边界：初始导入已完成真实的用户确认后 PR 合并；配置已回读核对。未进行直接 push main 被阻断的破坏性测试，尚无试点项目接入验收证据，也未验证全部使用场景，不宣称整个接入验收完成。Issue #3 本维护任务只推进至 PR 等待用户确认，不执行合并；后续实时进度以该 Issue 及关联 PR 为准。
+
+## 历史阶段四：PR #4 合并与等待状态问题再次出现
+
+日期：2026-10-02。适用提交：`4a94426b4d2823ed41e3c98d85866369f1dc4abf`，不作为后续 main 的固定指向。
+
+- [PR #4](https://github.com/gy9037/project-collaboration-standards/pull/4) 于 `2026-10-02T14:53:42Z` 合并，合并提交为 `4a94426b4d2823ed41e3c98d85866369f1dc4abf`；[Issue #3](https://github.com/gy9037/project-collaboration-standards/issues/3) 于 `2026-10-02T14:53:43Z` 关闭。二者为历史状态同步入口。
+- PR #4 评论中的用户批准记录对应 head `8fd4638182697c98fcf8e7384c09857746e73e46`。该 head 与合并提交的 tree 均为 `bd85ece275b2fef57fa364073a22d65100fda904`；`git diff --exit-code 8fd4638182697c98fcf8e7384c09857746e73e46 4a94426b4d2823ed41e3c98d85866369f1dc4abf` 无差异，确认合并内容与批准版本一致。
+- 合并后再次发现：上述合并提交的 PROJECT.md、README.md、接入记录及流程反馈仍有 Issue #3 维护任务“等待确认”“不执行合并”等阶段性文字。批准内容一致不等于状态文字在合并后仍有效；问题与建议见[流程反馈](../standards/feedback/2026-10-02-post-merge-status.md)。
+
+本阶段记录证明状态同步 PR 的合并事实，不提供 Orca 接入完成或试点验收通过的证据。
