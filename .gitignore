@@ -1,0 +1,8 @@
+# 本地凭据与临时输出；提交前仍须检查 diff
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+*.log
