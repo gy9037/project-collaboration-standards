@@ -7,3 +7,5 @@
 [维护者职责](MAINTAINER.md) · [项目接入清单](ADOPTION.md)
 
 建立独立 Git 仓库并同步远端；修改遵循 Issue → 分支 → 验证 → PR → 用户确认 → main。
+
+待合并规则提案：[项目接入边界与接手事实源](proposals/project-admission-boundaries.md)。提案不改变现行 V1.0，也不自动升级使用方。
