@@ -10,4 +10,4 @@ Ready 至少满足：问题基本明确、关键可行性已判断、关键假�
 
 立项后保留原 Idea，添加正式仓库链接及日期；Ready 不等于项目任务已完成。
 
-采用 [v1.0 规范快照](.standards/v1.0/STANDARD.md)，不用评分系统或自动初始化流程。
+采用 [v2.0 规范快照](.standards/v2.0/STANDARD.md)，具体步骤见规范仓库 `skills/collab-idea/SKILL.md`。不用评分系统或自动初始化流程。
