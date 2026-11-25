@@ -1,11 +1,13 @@
 # Idea Lab 执行规则
 
-Standard Version: v1.0
+Standard Version: v2.0
+规范源仓库：<填写 URL>
+锁定快照：[STANDARD.md](.standards/v2.0/STANDARD.md)
 
-先读 README.md、当前 Idea；涉及立项、状态判断或证据冲突时读 `.standards/v1.0/STANDARD.md` 第 3 节及相关规则。
+先读 README.md 和当前 Idea 文件。记录、探索、验证想法和判断是否立项，按 collab-idea skill 执行；其他场景对照规范第 10 条触发表。
 
-Inbox 只强制标题、原始想法、日期。逐步补充信息，明确区分证据与待验证假设；按所在目录维护唯一状态。满足 Ready 条件才建议立项，保留原 Idea 与正式项目链接。
+想法立项后，正式项目按该项目自己的 AGENTS.md 执行。用户审批事项只有规范第 6 条四类，清单外自行处理并在 Idea 文件或提交中记录。提交前检查 diff 无凭据。
 
-涉及正式项目时按项目 AGENTS.md 执行；对外发送、费用、权限变更或重要删除由用户确认。Git 提交前检查敏感信息；恢复时从文件和分支状态读取进度。
+Idea Lab 的修改同样从任务分支经 PR 进入 main，不直接推送 main；合并按规范第 5 条判档，用 collab-merge。
 
 Overrides：无。
